@@ -1,14 +1,15 @@
-import './globals.css';
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import { ThemeProvider } from './components/theme-provider';
-import { Toaster } from 'sonner';
+import "./globals.css";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import { ThemeProvider } from "../providers/theme-provider";
+import { Toaster } from "sonner";
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'TradeAnalysisApp - AI-Powered Trading Prompts',
-  description: 'Create and manage custom AI prompts for forex and stock market analysis',
+  title: "Trade Analysis App",
+  description:
+    "Create and manage custom AI prompts for forex and stock market analysis",
 };
 
 export default function RootLayout({
@@ -26,14 +27,14 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
-          <Toaster 
-            theme="dark" 
+          <Toaster
+            theme="dark"
             position="top-right"
             toastOptions={{
               style: {
-                background: '#1e293b',
-                border: '1px solid #334155',
-                color: '#f1f5f9',
+                background: "#1e293b",
+                border: "1px solid #334155",
+                color: "#f1f5f9",
               },
             }}
           />
